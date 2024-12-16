@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+.header {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calculator {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    width: calc(50% - 25px);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.operation-sign {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #764ba2;
+    font-weight: bold;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+h2, h3 {
+    color: #333;
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+label:hover {
+    color: #667eea;
+}
+
+#result {
+    color: #764ba2;
+    font-weight: bold;
+    font-size: 1.2em;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 class="header">Modern Calculator</h1>
+
+    <div class="calculator" role="application" aria-label="Calculator">
+        <div class="input-group">
+            <input type="number" id="num1" placeholder="Enter first number" aria-label="First number" required>
+            <span class="operation-sign" id="operationSign" aria-label="Operation sign">+</span>
+            <input type="number" id="num2" placeholder="Enter second number" aria-label="Second number" required>
+        </div>
+    
+        <div class="operations-group">
+          <h3>Select Operation:</h3>
+          <label><input type="radio" name="operation" value="add" checked onclick="updateOperationSign('+')"> Addition (+)</label><br>
+          <label><input type="radio" name="operation" value="subtract" onclick="updateOperationSign('-')"> Subtraction (-)</label><br>
+          <label><input type="radio" name="operation" value="multiply" onclick="updateOperationSign('×')"> Multiplication (×)</label><br>
+          <label><input type="radio" name="operation" value="divide" onclick="updateOperationSign('÷')"> Division (÷)</label><br>
+          <label><input type="radio" name="operation" value="modulus" onclick="updateOperationSign('%')"> Modulus (%)</label><br>
+          <label><input type="radio" name="operation" value="exponent" onclick="updateOperationSign('^')"> Exponent (^)</label><br>
+          <label><input type="radio" name="operation" value="squareRoot" onclick="updateOperationSign('√')"> Square Root (√)</label><br>
+          <label><input type="radio" name="operation" value="log" onclick="updateOperationSign('log')"> Natural Log (ln)</label><br>
+        </div>
+  
+        <button onclick="evaluateOperation()">Calculate</button>
+
+        <div class="result-container">
+            <h2>Result: <span id="result" aria-live="polite"></span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
